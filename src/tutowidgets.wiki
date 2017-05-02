@@ -137,7 +137,7 @@ let%client switch_visibility elt =
   else
     elt##.classList##add (Js.string "hidden")
 
-let%client mywidget s1 s2 = Elim_content.Html.D.(
+let%client mywidget s1 s2 = Eliom_content.Html.D.(
   let button  = div ~a:[a_class ["button"]] [pcdata s1] in
   let content = div ~a:[a_class ["content"]] [pcdata s2] in
   Lwt.async (fun () ->
